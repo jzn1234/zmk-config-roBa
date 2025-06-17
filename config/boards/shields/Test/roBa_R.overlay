@@ -29,7 +29,7 @@
         input-processors = <&zip_mouse_layer 4 2000>;
 
         on_gaming_layer {
-            layers = <2>;
+            layers = <3>;
             input-processors = <>;
         };
     };
