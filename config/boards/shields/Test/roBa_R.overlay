@@ -30,7 +30,6 @@
 
         on_gaming_layer {
             layers = <3>;
-            input-processors = <>;
         };
     };
 };
