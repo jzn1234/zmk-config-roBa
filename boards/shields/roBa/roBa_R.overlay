@@ -14,11 +14,28 @@
             ;
 };
 
+&zip_temp_layer {
+    // 入力してもAMLが解除されないキーの指定
+    excluded-positions = <
+        17 // H
+        18 // J
+        19 // K
+        20 // L
+        21 // ;
+    >;
+
+    // キー入力から200ms間はAMLが発動しないように設定
+    require-prior-idle-ms = <200>;
+};
+
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        // トラックボール使用後、5秒間レイヤ4(マウスレイヤ)を有効にする
+        input-processors = <&zip_temp_layer 4 5000>;
     };
 };
 
