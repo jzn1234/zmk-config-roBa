@@ -1,5 +1,8 @@
 #include "roBa.dtsi"
 
+// https://zmk.dev/docs/keymaps/input-processors
+#include <input/processors.dtsi>
+
 &default_transform {
     col-offset = <6>;
 };
