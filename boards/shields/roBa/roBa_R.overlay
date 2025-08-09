@@ -1,8 +1,5 @@
 #include "roBa.dtsi"
 
-// https://zmk.dev/docs/keymaps/input-processors
-#include <input/processors.dtsi>
-
 &default_transform {
     col-offset = <6>;
 };
@@ -29,11 +26,6 @@
 
     // キー入力から200ms間はAMLが発動しないように設定
     require-prior-idle-ms = <200>;
-};
-
-&mkp_input_listener {
-    // マウスキークリック時にAMLを5秒延長
-    input-processors = <&zip_temp_layer 4 5000>;
 };
 
 / {

@@ -28,6 +28,11 @@
     // };
 };
 
+&mkp_input_listener {
+    // マウスキークリック時にAMLを5秒延長
+    input-processors = <&zip_temp_layer 4 5000>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
