@@ -17,11 +17,14 @@
 &zip_temp_layer {
     // 入力してもAMLが解除されないキーの指定
     excluded-positions = <
+        12 // D
         17 // H
         18 // J
         19 // K
         20 // L
         21 // ;
+        40 // LANG1
+        41 // Enter
     >;
 
     // キー入力から200ms間はAMLが発動しないように設定
