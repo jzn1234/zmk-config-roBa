@@ -1,5 +1,8 @@
 #include "roBa.dtsi"
 
+// https://zmk.dev/docs/keymaps/input-processors
+#include <input/processors.dtsi>
+
 &default_transform {
     col-offset = <6>;
 };
@@ -14,11 +17,33 @@
             ;
 };
 
+&zip_temp_layer {
+    // 入力してもAMLが解除されないキーの指定
+    excluded-positions = <
+        17 // H
+        18 // J
+        19 // K
+        20 // L
+        21 // ;
+    >;
+
+    // キー入力から200ms間はAMLが発動しないように設定
+    require-prior-idle-ms = <200>;
+};
+
+&mkp_input_listener {
+    // マウスキークリック時にAMLを5秒延長
+    input-processors = <&zip_temp_layer 4 5000>;
+};
+
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        // トラックボール使用後、5秒間レイヤ4(マウスレイヤ)を有効にする
+        input-processors = <&zip_temp_layer 4 5000>;
     };
 };
 
