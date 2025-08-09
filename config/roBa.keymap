@@ -158,7 +158,7 @@
 &kp LSHFT  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE  &kp ESCAPE      &kp RIGHT_CONTROL  &kp ENTER                                   &kp F5
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
         };
 
         mouse {
