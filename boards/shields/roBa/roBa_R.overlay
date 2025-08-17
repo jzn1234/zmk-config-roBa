@@ -23,8 +23,13 @@
         19 // K
         20 // L
         21 // ;
+        27 // Control
+        34 // Shift_left
+        35 // Command
+        36 // Option
         40 // LANG1
         41 // Enter
+        42 // Shift_right
     >;
 
     // キー入力から200ms間はAMLが発動しないように設定
