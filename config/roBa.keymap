@@ -11,6 +11,8 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    // hold判定に入るまでの時間を少し長めに
+    tapping-term-ms = <300>;
 };
 
 &trackball {
