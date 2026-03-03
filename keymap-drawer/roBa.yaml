@@ -17,7 +17,7 @@ layers:
   - F
   - G
   - {t: ▽, type: trans}
-  - {t: gaming, h: toggle}
+  - {t: ▽, type: trans}
   - H
   - J
   - K
@@ -28,28 +28,28 @@ layers:
   - C
   - V
   - B
-  - LEFT CONTROL
-  - RIGHT GUI
+  - LEFT GUI
+  - RIGHT CONTROL
   - N
   - M
   - {t: ',', h: scroll_fn_bluetooth}
   - .
   - BACKSPACE
   - LSHFT
-  - LEFT WIN
+  - LEFT CONTROL
   - LEFT ALT
   - symbol_arrow
   - {t: SPACE, h: scroll_fn_bluetooth}
   - {t: LANGUAGE 2, h: number_symbol}
   - {t: '&kp_exit_AML LANGUAGE_1', h: RIGHT SHIFT}
-  - {t: '&kp_exit_AML ENTER', h: RIGHT CONTROL}
+  - {t: '&kp_exit_AML ENTER', h: RIGHT GUI}
   - RIGHT SHIFT
   symbol_arrow:
   - '!'
   - '@'
   - '['
   - ']'
-  - RCTRL
+  - ^
   - '~'
   - '?'
   - ':'
@@ -98,7 +98,7 @@ layers:
   - F7
   - F8
   - F9
-  - Ctl+Sft+K
+  - Gui+Sft+K
   - '0'
   - '4'
   - '5'
@@ -122,7 +122,7 @@ layers:
   - F1
   - F2
   - F3
-  - Ctl+/
+  - Gui+/
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -132,50 +132,50 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  gaming:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - A
-  - S
-  - D
-  - F
-  - G
+  empty_3:
   - {t: ▽, type: trans}
-  - {t: gaming, h: toggle}
-  - H
-  - '&mkp MB1'
-  - '&mkp MB3'
-  - '&mkp MB2'
-  - '-'
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - scroll_fn_bluetooth
-  - F3
-  - N
-  - M
-  - ','
-  - .
-  - BACKSPACE
-  - LSHFT
-  - LEFT WIN
-  - LEFT ALT
-  - LEFT SHIFT
-  - SPACE
-  - ESCAPE
-  - RIGHT CONTROL
-  - ENTER
-  - F5
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -221,9 +221,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   scroll_fn_bluetooth:
-  - Ctl+Alt+DELETE
+  - Gui+Sft+4
   - {t: ▽, type: trans}
-  - Gui+Sft+UP ARROW
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: BT, h: '2'}
@@ -231,17 +231,17 @@ layers:
   - Gui+Sft+9
   - Gui+Sft+0
   - {t: BT, h: '4'}
-  - LEFT CONTROL
-  - Gui+Sft+S
-  - Ctl+PAGE UP
-  - Ctl+PAGE DOWN
+  - LEFT GUI
+  - Gui+Sft+4
+  - Gui+Sft+[
+  - Gui+Sft+]
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: BT, h: '1'}
-  - Gui+LEFT ARROW
-  - Gui+UP ARROW
-  - Gui+RIGHT
+  - Gui+Sft+LEFT ARROW
+  - Gui+Sft+ENTER
+  - Gui+Sft+RIGHT
   - {t: BT, h: '3'}
   - LEFT SHIFT
   - MUTE
@@ -249,10 +249,10 @@ layers:
   - VOLUME UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+Sft+LEFT
+  - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - Gui+Sft+6
-  - {t: Ctl+DOWN ARROW, type: held}
+  - {t: Gui+Sft+DOWN ARROW, type: held}
   - Gui+Sft+7
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
