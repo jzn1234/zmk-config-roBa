@@ -11,18 +11,18 @@ layers:
   - I
   - O
   - P
-  - A
-  - S
-  - {t: '&kp_exit_AML D', h: LEFT SHIFT}
-  - F
+  - {t: A, h: LEFT GUI}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LEFT CONTROL}
+  - {t: F, h: LEFT SHIFT}
   - G
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - H
-  - J
-  - K
-  - L
-  - '-'
+  - {t: J, h: RIGHT SHIFT}
+  - {t: K, h: RIGHT CONTROL}
+  - {t: L, h: RIGHT ALT}
+  - {t: '-', h: RIGHT GUI}
   - Z
   - X
   - C
