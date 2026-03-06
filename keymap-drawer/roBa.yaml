@@ -235,7 +235,7 @@ layers:
   - Gui+Sft+Ctl+4
   - Gui+Sft+[
   - Gui+Sft+]
-  - Gui+F
+  - Gui+Sft+F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: BT, h: '1'}
