@@ -221,10 +221,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   scroll_fn_bluetooth:
-  - Gui+Sft+4
+  - ESC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+Sft+L
   - {t: ▽, type: trans}
   - {t: BT, h: '2'}
   - Gui+Sft+8
@@ -232,10 +232,10 @@ layers:
   - Gui+Sft+0
   - {t: BT, h: '4'}
   - LEFT GUI
-  - Gui+Sft+4
+  - Gui+Sft+Ctl+4
   - Gui+Sft+[
   - Gui+Sft+]
-  - {t: ▽, type: trans}
+  - Gui+F
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: BT, h: '1'}
