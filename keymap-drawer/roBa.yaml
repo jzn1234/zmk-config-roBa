@@ -7,10 +7,10 @@ layers:
   - R
   - T
   - Y
-  - U
-  - I
-  - O
-  - P
+  - {t: U, h: RIGHT SHIFT}
+  - {t: I, h: RIGHT CONTROL}
+  - {t: O, h: RIGHT ALT}
+  - {t: P, h: RIGHT GUI}
   - {t: A, h: LEFT GUI}
   - {t: S, h: LEFT ALT}
   - {t: D, h: LEFT CONTROL}
@@ -19,10 +19,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - H
-  - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: RIGHT CONTROL}
-  - {t: L, h: RIGHT ALT}
-  - {t: '-', h: RIGHT GUI}
+  - J
+  - K
+  - L
+  - '-'
   - Z
   - X
   - C
