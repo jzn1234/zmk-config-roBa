@@ -57,6 +57,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
+
+        ctrl_up {
+            bindings = <&kp LC(UP_ARROW)>;
+            key-positions = <2 3>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <23 24>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <24 25>;
+        };
     };
 
     macros {
