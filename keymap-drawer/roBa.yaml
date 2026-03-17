@@ -227,3 +227,9 @@ combos:
   k: TAB
 - p: [0, 1]
   k: ESCAPE
+- p: [2, 3]
+  k: Ctl+UP ARROW
+- p: [23, 24]
+  k: Gui+C
+- p: [24, 25]
+  k: Gui+V
