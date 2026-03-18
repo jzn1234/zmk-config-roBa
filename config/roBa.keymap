@@ -60,7 +60,7 @@
 
         ctrl_up {
             bindings = <&kp LC(UP_ARROW)>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
         };
 
         copy {
