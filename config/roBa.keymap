@@ -218,7 +218,7 @@
 &kp LSHFT          &kp LEFT_CONTROL  &kp LEFT_ALT         &mo 1                &lt 4 SPACE  &lt 2 LANGUAGE_2      &mt_exit_AML_on_tap RIGHT_SHIFT LANGUAGE_1  &mt_exit_AML_on_tap RIGHT_GUI ENTER                                                                &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
+            sensor-bindings = <&inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
 
         symbol_arrow {
