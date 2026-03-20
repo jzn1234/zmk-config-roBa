@@ -234,6 +234,8 @@
 &kp PIPE         &kp ASTERISK     &kp HASH              &kp GRAVE              &kp PERCENT  &kp UNDERSCORE      &trans    &kp BSLH       &kp EQUAL       &kp SQT           &kp DQT       &kp FSLH
 &trans           &trans           &trans                &trans                 &trans       &trans              &trans    &trans                                                &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(Z) LG(LS(Z))>;
         };
 
         number_symbol {
@@ -244,7 +246,7 @@
 &trans        &trans  &trans  &trans  &trans     &trans      &trans            &trans                           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(PAGE_UP) LG(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         mouse {
