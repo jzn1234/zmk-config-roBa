@@ -212,8 +212,8 @@
 
         default {
             bindings = <
-&kp Q              &kp W             &kp E                &kp R                &kp T                                                                          &kp Y                                &hmr_2 RIGHT_SHIFT U  &hmr RIGHT_CONTROL I  &hmr RIGHT_ALT O  &hmr_2 RIGHT_GUI P
-&hml_2 LEFT_GUI A  &hml LEFT_ALT S   &hml LEFT_CONTROL D  &hml_2 LEFT_SHIFT F  &kp G        &trans                &trans                                      &kp H                                &kp J                 &kp K                 &kp L             &kp MINUS
+&kp Q  &kp W  &kp E  &kp R  &kp T                                                                          &kp Y  &kp U  &kp I  &kp O  &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G  &trans                &trans                                      &kp H  &kp J  &kp K  &kp L  &kp MINUS
 &kp Z              &kp X             &kp C                &kp V                &kp B        &kp LEFT_GUI          &kp RIGHT_CONTROL                           &kp N                                &kp M                 &lt 4 COMMA           &kp DOT           &kp BACKSPACE
 &kp LSHFT          &kp LEFT_CONTROL  &kp LEFT_ALT         &mo 1                &lt 4 SPACE  &lt 2 LANGUAGE_2      &mt_exit_AML_on_tap RIGHT_SHIFT LANGUAGE_1  &mt_exit_AML_on_tap RIGHT_GUI ENTER                                                                &kp RIGHT_SHIFT
             >;
