@@ -42,8 +42,8 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        // トラックボール使用後、5秒間レイヤ4(マウスレイヤ)を有効にする
-        input-processors = <&zip_temp_layer 4 5000>;
+        // トラックボール使用後、5秒間レイヤ3(マウスレイヤ)を有効にする
+        input-processors = <&zip_temp_layer 3 5000>;
     };
 };
 
