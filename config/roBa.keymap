@@ -232,9 +232,9 @@
 
         number_symbol {
             bindings = <
-&kp F10  &kp F7  &kp F8  &kp F9  &trans                                &mt F10 ASTERISK  &mt F7 N7  &mt F8 N8  &mt F9 N9  &kp LG(LS(K))
+&trans        &trans        &trans            &trans          &trans                                &kp F10    &mt F7 N7  &mt F8 N8  &mt F9 N9  &kp LG(LS(K))
 &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &trans      &kp HOME          &mt F11 N0    &mt F4 N4  &mt F5 N5  &mt F6 N6  &trans
-&kp F12  &kp F1  &kp F2  &kp F3  &trans  &kp LA(LS(DOWN))  &kp END   &mt F12 SLASH  &mt F1 N1  &mt F2 N2  &mt F3 N3  &kp LG(SLASH)
+&trans        &trans        &trans            &trans          &trans  &trans      &kp END           &kp F12    &mt F1 N1  &mt F2 N2  &mt F3 N3  &kp LG(SLASH)
 &trans        &trans  &trans  &trans  &trans     &trans      &trans            &trans                           &trans
             >;
 
