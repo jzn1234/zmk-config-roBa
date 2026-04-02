@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 250
 
 &mt {
     flavor = "balanced";
@@ -72,6 +72,11 @@
             bindings = <&kp LG(V)>;
             key-positions = <24 25>;
         };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <22 23>;
+        };
     };
 
     macros {
@@ -93,6 +98,17 @@
             label = "exit_AML";
         };
 
+        // Controlを2回タップする
+
+        ctrl_twice: ctrl_twice {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <120>;
+            tap-ms = <80>;
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LCTRL>;
+            label = "CTRL_TWICE";
+        };
+
         // キー押下後にAMLを解除する
 
         kp_exit_AML: kp_exit_AML {
@@ -106,6 +122,14 @@
     };
 
     behaviors {
+        scroll_up_down: scroll_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -212,33 +236,35 @@
 
         default {
             bindings = <
-&kp Q              &kp W             &kp E                &kp R                &kp T                                                                          &kp Y                                &hmr_2 RIGHT_SHIFT U  &hmr RIGHT_CONTROL I  &hmr RIGHT_ALT O  &hmr_2 RIGHT_GUI P
-&hml_2 LEFT_GUI A  &hml LEFT_ALT S   &hml LEFT_CONTROL D  &hml_2 LEFT_SHIFT F  &kp G        &trans                &trans                                      &kp H                                &kp J                 &kp K                 &kp L             &kp MINUS
-&kp Z              &kp X             &kp C                &kp V                &kp B        &kp LEFT_GUI          &kp RIGHT_CONTROL                           &kp N                                &kp M                 &lt 4 COMMA           &kp DOT           &kp BACKSPACE
-&kp LSHFT          &kp LEFT_CONTROL  &kp LEFT_ALT         &mo 1                &lt 4 SPACE  &lt 2 LANGUAGE_2      &mt_exit_AML_on_tap RIGHT_SHIFT LANGUAGE_1  &mt_exit_AML_on_tap RIGHT_GUI ENTER                                                                &kp RIGHT_SHIFT
+&kp Q      &kp W             &kp E         &kp R  &kp T                                                                          &kp Y                                &kp U  &kp I        &kp O    &kp P
+&kp A      &kp S             &kp D         &kp F  &kp G        &trans                &trans                                      &kp H                                &kp J  &kp K        &kp L    &kp MINUS
+&kp Z      &kp X             &kp C         &kp V  &kp B        &kp LEFT_GUI          &kp RIGHT_CONTROL                           &kp N                                &kp M  &lt 4 COMMA  &kp DOT  &kp BACKSPACE
+&kp LSHFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &mo 1  &lt 4 SPACE  &lt 2 LANGUAGE_2      &mt_exit_AML_on_tap RIGHT_SHIFT LANGUAGE_1  &mt_exit_AML_on_tap RIGHT_GUI ENTER                               &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(TAB) TAB>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
-        symbol_arrow {
+        symbol {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp CARET                                  &kp TILDE      &kp QUESTION  &kp COLON     &kp SEMI   &kp PLUS
-&kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &trans              &kp HOME  &kp AMPERSAND  &kp EQUAL     &kp UP_ARROW  &kp SQT    &kp DOUBLE_QUOTES
-&kp PIPE         &kp ASTERISK     &kp HASH              &kp GRAVE              &kp PERCENT  &kp UNDERSCORE      &kp END   &kp BSLH       &kp LEFT      &kp DOWN      &kp RIGHT  &kp FSLH
-&trans           &trans           &trans                &trans                 &trans       &trans              &trans    &trans                                                &trans
+&kp EXCLAMATION  &kp AT_SIGN      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp CARET                                &kp TILDE      &kp QUESTION    &kp COLON         &kp SEMI      &kp PLUS
+&kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR   &trans              &trans  &kp AMPERSAND  &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT  &sk LEFT_GUI
+&kp PIPE         &kp ASTERISK     &kp HASH              &kp GRAVE              &kp PERCENT  &kp UNDERSCORE      &trans  &kp BSLH       &kp EQUAL       &kp SQT           &kp DQT       &kp FSLH
+&trans           &trans           &trans                &trans                 &trans       &trans              &trans  &trans                                                         &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(Z) LG(LS(Z))>;
         };
 
-        number_symbol {
+        number {
             bindings = <
-&kp ASTERISK  &kp N7  &kp N8  &kp N9  &kp MINUS                                &kp F10  &kp F7  &kp F8  &kp F9  &kp LG(LS(K))
-&kp N0        &kp N4  &kp N5  &kp N6  &kp PLUS   &trans      &trans            &kp F11  &kp F4  &kp F5  &kp F6  &trans
-&kp SLASH     &kp N1  &kp N2  &kp N3  &kp DOT    &trans      &kp LA(LS(DOWN))  &kp F12  &kp F1  &kp F2  &kp F3  &kp LG(SLASH)
-&trans        &trans  &trans  &trans  &trans     &trans      &trans            &trans                           &trans
+&trans        &kp LEFT      &kp UP_ARROW      &kp RIGHT       &trans                        &kp F10     &mt F7 N7  &mt F8 N8  &mt F9 N9  &kp LG(LS(K))
+&sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &trans  &trans      &kp HOME  &kp F11     &mt F4 N4  &mt F5 N5  &mt F6 N6  &kp N0
+&trans        &trans        &kp DOWN_ARROW    &trans          &trans  &trans      &kp END   &kp F12     &mt F1 N1  &mt F2 N2  &mt F3 N3  &kp LG(SLASH)
+&trans        &trans        &trans            &trans          &trans  &trans      &trans    &trans                                       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(PAGE_UP) LG(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         mouse {
@@ -250,9 +276,9 @@
             >;
         };
 
-        scroll_fn_bluetooth {
+        system {
             bindings = <
-&kp ESC         &trans                    &kp LS(LG(L))      &kp LG(LS(L))     &trans                             &bt BT_SEL 2  &kp LG(LS(N8))          &kp LG(LS(N9))          &kp LG(LS(N0))     &bt BT_SEL 4
+&kp ESC         &kp LS(LG(V))             &kp LS(LG(L))      &ctrl_twice       &trans                             &bt BT_SEL 2  &kp LG(LS(N8))          &kp LG(LS(N9))          &kp LG(LS(N0))     &bt BT_SEL 4
 &kp LEFT_GUI    &kp LG(LS(LC(NUMBER_4)))  &kp LG(LS(LBKT))   &kp LG(LS(RBKT))  &kp LG(LS(F))  &trans      &trans  &bt BT_SEL 1  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(ENTER))       &kp LG(LS(RIGHT))  &bt BT_SEL 3
 &kp LEFT_SHIFT  &kp K_MUTE                &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans         &trans      &trans  &bt BT_SEL 0  &kp LG(LS(N6))          &kp LG(LS(DOWN_ARROW))  &kp LG(LS(N7))     &trans
 &trans          &bt BT_CLR_ALL            &bt BT_CLR         &trans            &trans         &trans      &trans  &trans                                                                           &trans
