@@ -188,7 +188,7 @@ layers:
   - Gui+Sft+0
   - {t: BT, h: '4'}
   - LEFT GUI
-  - Gui+Sft+Ctl+4
+  - Gui+Sft+4
   - Gui+Sft+[
   - Gui+Sft+]
   - Gui+Sft+F
